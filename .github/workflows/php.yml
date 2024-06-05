@@ -22,10 +22,8 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      - name: Composer (php-actions)
+      - name: Composer Install
         uses: php-actions/composer@v6
-        with: 
-          php_extensions: sockets pdo_pgsql
 
       - name: PHPCS
         run: composer run phpcs
